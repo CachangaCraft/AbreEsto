@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para ti ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         PANTALLA INICIAL
+    =============================== -->
+
+    <section id="inicio" class="pantalla inicio">
+
+        <div class="inicio-contenido">
+
+            <div class="pequeno">
+                PARA ALGUIEN ESPECIAL
+            </div>
+
+            <h1>
+                Tengo algo<br>
+                <span>para ti</span>
+            </h1>
+
+            <div class="corazon-separador">
+                ───── ♥ ─────
+            </div>
+
+            <p>
+                No es mucho...<br>
+                pero lo hice pensando en ti.
+            </p>
+
+            <button id="abrirBtn" class="boton">
+                Abrir
+                <span>♥</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         HISTORIA
+    =============================== -->
+
+    <section id="historia" class="pantalla historia oculto">
+
+        <div class="estrellas" id="estrellas"></div>
+
+        <!-- CAMINO -->
+
+        <svg
+            class="camino-svg"
+            viewBox="0 0 1000 500"
+            preserveAspectRatio="none"
+        >
+
+            <path
+                id="camino"
+                d="
+                    M 80 380
+                    C 180 120,
+                      300 120,
+                      400 340
+
+                    S 600 560,
+                      700 300
+
+                    S 850 80,
+                      920 250
+                "
+            />
+
+            <path
+                id="camino-visible"
+                d="
+                    M 80 380
+                    C 180 120,
+                      300 120,
+                      400 340
+
+                    S 600 560,
+                      700 300
+
+                    S 850 80,
+                      920 250
+                "
+            />
+
+        </svg>
+
+
+        <!-- PUNTOS DEL CAMINO -->
+
+        <div class="punto punto1">
+            <span>1</span>
+        </div>
+
+        <div class="punto punto2">
+            <span>2</span>
+        </div>
+
+        <div class="punto punto3">
+            <span>3</span>
+        </div>
+
+        <div class="punto punto4">
+            <span>4</span>
+        </div>
+
+        <div class="punto punto5">
+            <span>5</span>
+        </div>
+
+
+        <!-- MENSAJE -->
+
+        <div class="mensaje-container">
+
+            <div class="numero" id="numero">
+                01
+            </div>
+
+            <div class="mensaje" id="mensaje">
+                Hay personas que llegan a nuestra vida...
+                y sin darnos cuenta empiezan a hacerla más bonita.
+            </div>
+
+            <div class="decoracion-mensaje">
+                ♥
+            </div>
+
+            <button
+                id="continuarBtn"
+                class="boton continuar"
+            >
+                Continuar
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         ROSA FINAL
+    =============================== -->
+
+    <section id="final" class="pantalla final oculto">
+
+        <div class="final-brillo"></div>
+
+        <div class="final-contenido">
+
+            <div class="final-texto">
+                Y después de todo esto...
+            </div>
+
+
+            <!-- ROSA -->
+
+            <div class="rosa-wrapper">
+
+                <svg
+                    class="rosa"
+                    viewBox="0 0 400 650"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+
+                    <defs>
+
+                        <!-- ROJO CLARO -->
+                        <radialGradient
+                            id="rojo1"
+                            cx="35%"
+                            cy="25%"
+                        >
+                            <stop
+                                offset="0%"
+                                stop-color="#ffb0bd"
+                            />
+
+                            <stop
+                                offset="35%"
+                                stop-color="#ff5275"
+                            />
+
+                            <stop
+                                offset="75%"
+                                stop-color="#d31349"
+                            />
+
+                            <stop
+                                offset="100%"
+                                stop-color="#6d0928"
+                            />
+                        </radialGradient>
+
+
+                        <!-- ROJO OSCURO -->
+
+                        <linearGradient
+                            id="rojo2"
+                            x1="0"
+                            y1="0"
+                            x2="1"
+                            y2="1"
+                        >
+
+                            <stop
+                                offset="0%"
+                                stop-color="#ff7590"
+                            />
+
+                            <stop
+                                offset="50%"
+                                stop-color="#d51a4c"
+                            />
+
+                            <stop
+                                offset="100%"
+                                stop-color="#650820"
+                            />
+
+                        </linearGradient>
+
+
+                        <!-- TALLO -->
+
+                        <linearGradient
+                            id="verde"
+                            x1="0"
+                            y1="0"
+                            x2="1"
+                            y2="0"
+                        >
+
+                            <stop
+                                offset="0%"
+                                stop-color="#102b16"
+                            />
+
+                            <stop
+                                offset="45%"
+                                stop-color="#438247"
+                            />
+
+                            <stop
+                                offset="70%"
+                                stop-color="#286132"
+                            />
+
+                            <stop
+                                offset="100%"
+                                stop-color="#081a0c"
+                            />
+
+                        </linearGradient>
+
+
+                        <!-- HOJAS -->
+
+                        <linearGradient
+                            id="hoja"
+                            x1="0"
+                            y1="0"
+                            x2="1"
+                            y2="1"
+                        >
+
+                            <stop
+                                offset="0%"
+                                stop-color="#6b9d63"
+                            />
+
+                            <stop
+                                offset="45%"
+                                stop-color="#2f6535"
+                            />
+
+                            <stop
+                                offset="100%"
+                                stop-color="#102b16"
+                            />
+
+                        </linearGradient>
+
+
+                        <filter id="sombra">
+
+                            <feDropShadow
+                                dx="0"
+                                dy="12"
+                                stdDeviation="10"
+                                flood-opacity=".5"
+                            />
+
+                        </filter>
+
+                    </defs>
+
+
+                    <!-- TALLO -->
+
+                    <path
+                        class="tallo-final"
+                        d="
+                            M200 350
+                            C195 430 205 520 190 630
+                        "
+                        fill="none"
+                        stroke="url(#verde)"
+                        stroke-width="14"
+                        stroke-linecap="round"
+                    />
+
+
+                    <!-- HOJA IZQUIERDA -->
+
+                    <path
+                        class="hoja-final"
+                        d="
+                            M198 480
+                            C150 440
+                            90 455
+                            60 500
+                            C110 525
+                            165 520
+                            198 480
+                            Z
+                        "
+                        fill="url(#hoja)"
+                    />
+
+                    <path
+                        d="
+                            M75 495
+                            C120 492
+                            155 490
+                            188 480
+                        "
+                        stroke="#9ac28c"
+                        stroke-opacity=".3"
+                        stroke-width="3"
+                        fill="none"
+                    />
+
+
+                    <!-- HOJA DERECHA -->
+
+                    <path
+                        class="hoja-final"
+                        d="
+                            M198 535
+                            C250 495
+                            315 510
+                            345 550
+                            C295 575
+                            235 570
+                            198 535
+                            Z
+                        "
+                        fill="url(#hoja)"
+                    />
+
+                    <path
+                        d="
+                            M210 535
+                            C255 540
+                            300 545
+                            330 550
+                        "
+                        stroke="#9ac28c"
+                        stroke-opacity=".3"
+                        stroke-width="3"
+                        fill="none"
+                    />
+
+
+                    <!-- =========================
+                         ROSA
+                    ========================== -->
+
+                    <g
+                        class="flor-final"
+                        filter="url(#sombra)"
+                    >
+
+                        <!-- PETALO TRASERO -->
+
+                        <path
+                            d="
+                                M200 370
+
+                                C105 365
+                                55 300
+                                75 220
+
+                                C95 145
+                                150 105
+                                205 150
+
+                                C255 100
+                                320 140
+                                335 215
+
+                                C350 295
+                                295 360
+                                200 370
+
+                                Z
+                            "
+                            fill="url(#rojo2)"
+                        />
+
+
+                        <!-- PETALO IZQUIERDO -->
+
+                        <path
+                            d="
+                                M200 360
+
+                                C125 350
+                                85 310
+                                100 245
+
+                                C112 195
+                                150 165
+                                195 195
+
+                                C165 245
+                                165 310
+                                200 360
+
+                                Z
+                            "
+                            fill="url(#rojo1)"
+                        />
+
+
+                        <!-- PETALO DERECHO -->
+
+                        <path
+                            d="
+                                M200 360
+
+                                C275 355
+                                320 315
+                                310 250
+
+                                C302 195
+                                260 165
+                                215 200
+
+                                C245 250
+                                240 310
+                                200 360
+
+                                Z
+                            "
+                            fill="url(#rojo1)"
+                        />
+
+
+                        <!-- PETALO CENTRAL GRANDE -->
+
+                        <path
+                            d="
+                                M200 350
+
+                                C145 330
+                                135 275
+                                160 230
+
+                                C180 195
+                                210 185
+                                230 215
+
+                                C255 185
+                                285 205
+                                295 245
+
+                                C305 295
+                                265 340
+                                200 350
+
+                                Z
+                            "
+                            fill="url(#rojo2)"
+                        />
+
+
+                        <!-- PETALO INTERIOR IZQUIERDO -->
+
+                        <path
+                            d="
+                                M200 330
+
+                                C165 315
+                                155 275
+                                175 245
+
+                                C190 220
+                                210 225
+                                220 245
+
+                                C200 260
+                                195 295
+                                200 330
+
+                                Z
+                            "
+                            fill="url(#rojo1)"
+                        />
+
+
+                        <!-- PETALO INTERIOR DERECHO -->
+
+                        <path
+                            d="
+                                M200 330
+
+                                C235 315
+                                245 275
+                                225 245
+
+                                C210 220
+                                190 225
+                                180 245
+
+                                C200 260
+                                205 295
+                                200 330
+
+                                Z
+                            "
+                            fill="url(#rojo2)"
+                        />
+
+
+                        <!-- CENTRO ENROLLADO -->
+
+                        <path
+                            d="
+                                M200 305
+
+                                C180 295
+                                175 270
+                                190 255
+
+                                C205 240
+                                230 250
+                                230 270
+
+                                C230 288
+                                212 295
+                                202 283
+
+                                C195 275
+                                200 265
+                                210 265
+                            "
+                            fill="none"
+                            stroke="#ff9bad"
+                            stroke-width="12"
+                            stroke-linecap="round"
+                        />
+
+
+                        <!-- BRILLO -->
+
+                        <ellipse
+                            cx="150"
+                            cy="195"
+                            rx="35"
+                            ry="18"
+                            fill="#ffe3e8"
+                            opacity=".2"
+                        />
+
+                    </g>
+
+                </svg>
+
+            </div>
+
+
+            <div class="final-mensaje">
+                Porque si tuviera que elegir<br>
+                un lugar donde estar...
+                <strong>sería contigo. ❤️</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
